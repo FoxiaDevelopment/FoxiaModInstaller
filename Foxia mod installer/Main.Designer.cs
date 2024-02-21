@@ -54,6 +54,7 @@
             FerriteCore = new CheckBox();
             LazyDFU = new CheckBox();
             MandatoryMods = new CheckBox();
+            Credits = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -105,7 +106,7 @@
             panel1.Controls.Add(exitButton);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, -2);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 51);
             panel1.TabIndex = 4;
@@ -318,7 +319,7 @@
             // 
             Nvidium_label.AutoSize = true;
             Nvidium_label.ForeColor = Color.White;
-            Nvidium_label.Location = new Point(243, 428);
+            Nvidium_label.Location = new Point(376, 428);
             Nvidium_label.Name = "Nvidium_label";
             Nvidium_label.Size = new Size(403, 15);
             Nvidium_label.TabIndex = 25;
@@ -373,12 +374,27 @@
             MandatoryMods.TabIndex = 20;
             MandatoryMods.UseVisualStyleBackColor = true;
             // 
+            // Credits
+            // 
+            Credits.ActiveLinkColor = SystemColors.Highlight;
+            Credits.AutoSize = true;
+            Credits.LinkBehavior = LinkBehavior.HoverUnderline;
+            Credits.LinkColor = Color.LightGray;
+            Credits.Location = new Point(237, 426);
+            Credits.Name = "Credits";
+            Credits.Size = new Size(44, 15);
+            Credits.TabIndex = 30;
+            Credits.TabStop = true;
+            Credits.Text = "Credits";
+            Credits.LinkClicked += Credits_LinkClicked;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(48, 56, 65);
             ClientSize = new Size(800, 450);
+            Controls.Add(Credits);
             Controls.Add(LazyDFU);
             Controls.Add(FerriteCore);
             Controls.Add(ModMenu);
@@ -440,5 +456,6 @@
         private CheckBox FerriteCore;
         private CheckBox LazyDFU;
         private CheckBox MandatoryMods;
+        private LinkLabel Credits;
     }
 }

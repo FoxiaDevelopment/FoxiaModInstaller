@@ -136,15 +136,15 @@ namespace Foxia_mod_installer
                     foreach (string file in Directory.GetFiles(minecraftModsFolder))
                     {
                         try
-                        { 
-                            File.Delete(file); 
+                        {
+                            File.Delete(file);
                         }
-                        catch (Exception ex) 
-                        { 
+                        catch (Exception ex)
+                        {
                             MessageBox.Show($"Palun sulge minecraft enne installeri kasutamist!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             this.Close();
                         }
-                        
+
                     }
                     foreach (string dir in Directory.GetDirectories(minecraftModsFolder))
                     {
@@ -213,48 +213,48 @@ namespace Foxia_mod_installer
             bool isChecked14 = IsCheckboxChecked("FerriteCore", this);
             bool isChecked15 = IsCheckboxChecked("LazyDFU", this);
 
-                DialogResult warn = MessageBox.Show("Oled sa kindel et soovid jätkata?", "Foxia Mod Installer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (warn == DialogResult.No) { this.Close(); }
+            DialogResult warn = MessageBox.Show("Oled sa kindel et soovid jätkata?", "Foxia Mod Installer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (warn == DialogResult.No) { this.Close(); }
 
-                if (isChecked4)
-                {
-                    BackupFolder();
-                }
+            if (isChecked4)
+            {
+                BackupFolder();
+            }
 
-                if (isChecked)
-                {
-                    Install("https://cdn.modrinth.com/data/9eGKb6K1/versions/2OsfFUxE/voicechat-fabric-1.20.4-2.5.4.jar", minecraftModsFolder);
-                }
+            if (isChecked)
+            {
+                Install("https://cdn.modrinth.com/data/9eGKb6K1/versions/2OsfFUxE/voicechat-fabric-1.20.4-2.5.4.jar", minecraftModsFolder);
+            }
 
-                if (isChecked3)
-                {
-                    Install("https://cdn.modrinth.com/data/P7dR8mSH/versions/Ca6gRk94/fabric-api-0.96.3%2B1.20.4.jar", minecraftModsFolder);
-                    Install("https://cdn.modrinth.com/data/9s6osm5g/versions/eBZiZ9NS/cloth-config-13.0.121-fabric.jar", minecraftModsFolder);
-                    
-                }
+            if (isChecked3)
+            {
+                Install("https://cdn.modrinth.com/data/P7dR8mSH/versions/Ca6gRk94/fabric-api-0.96.3%2B1.20.4.jar", minecraftModsFolder);
+                Install("https://cdn.modrinth.com/data/9s6osm5g/versions/eBZiZ9NS/cloth-config-13.0.121-fabric.jar", minecraftModsFolder);
 
-                if (isChecked2)
-                {
-                    if (isChecked5) { Install("https://cdn.modrinth.com/data/AANobbMI/versions/4GyXKCLd/sodium-fabric-0.5.8%2Bmc1.20.4.jar", minecraftModsFolder); }
-                    if (isChecked6) { Install("https://cdn.modrinth.com/data/gvQqBUqZ/versions/nMhjKWVE/lithium-fabric-mc1.20.4-0.12.1.jar", minecraftModsFolder); }
-                    if (isChecked7) { Install("https://cdn.modrinth.com/data/H8CaAYZC/versions/HZYU0kdg/starlight-1.1.3%2Bfabric.f5dcd1a.jar", minecraftModsFolder); }
-                    if (isChecked8) { Install("https://cdn.modrinth.com/data/DynYZEae/versions/WyhKYeMf/exordium-fabric-1.2.1-mc1.20.4.jar", minecraftModsFolder); };
-                    if (isChecked9) { Install("https://cdn.modrinth.com/data/NNAgCjsB/versions/HSirwtwV/entityculling-fabric-1.6.3.1-mc1.20.4.jar", minecraftModsFolder); }
-                    if (isChecked10) { Install("https://cdn.modrinth.com/data/nmDcB62a/versions/Btq1HFzk/modernfix-fabric-5.13.0%2Bmc1.20.4.jar", minecraftModsFolder); }
-                    if (isChecked11) { Install("https://cdn.modrinth.com/data/fQEb0iXm/versions/bRcuOnao/krypton-0.2.6.jar", minecraftModsFolder); }
-                }
+            }
 
-                if (isChecked5 && isChecked2)
-                {
-                    Install("https://cdn.modrinth.com/data/PtjYWJkn/versions/M0ndiav7/sodium-extra-0.5.4%2Bmc1.20.4-build.116.jar", minecraftModsFolder);
-                    Install("https://cdn.modrinth.com/data/Bh37bMuy/versions/fkLiGoHs/reeses_sodium_options-1.7.2%2Bmc1.20.4-build.102.jar", minecraftModsFolder);
+            if (isChecked2)
+            {
+                if (isChecked5) { Install("https://cdn.modrinth.com/data/AANobbMI/versions/4GyXKCLd/sodium-fabric-0.5.8%2Bmc1.20.4.jar", minecraftModsFolder); }
+                if (isChecked6) { Install("https://cdn.modrinth.com/data/gvQqBUqZ/versions/nMhjKWVE/lithium-fabric-mc1.20.4-0.12.1.jar", minecraftModsFolder); }
+                if (isChecked7) { Install("https://cdn.modrinth.com/data/H8CaAYZC/versions/HZYU0kdg/starlight-1.1.3%2Bfabric.f5dcd1a.jar", minecraftModsFolder); }
+                if (isChecked8) { Install("https://cdn.modrinth.com/data/DynYZEae/versions/WyhKYeMf/exordium-fabric-1.2.1-mc1.20.4.jar", minecraftModsFolder); };
+                if (isChecked9) { Install("https://cdn.modrinth.com/data/NNAgCjsB/versions/HSirwtwV/entityculling-fabric-1.6.3.1-mc1.20.4.jar", minecraftModsFolder); }
+                if (isChecked10) { Install("https://cdn.modrinth.com/data/nmDcB62a/versions/Btq1HFzk/modernfix-fabric-5.13.0%2Bmc1.20.4.jar", minecraftModsFolder); }
+                if (isChecked11) { Install("https://cdn.modrinth.com/data/fQEb0iXm/versions/bRcuOnao/krypton-0.2.6.jar", minecraftModsFolder); }
+            }
 
-                    if(isChecked12) { Install("https://cdn.modrinth.com/data/SfMw2IZN/versions/J2fuM58R/nvidium-0.2.6-beta.jar", minecraftModsFolder); }
-                }
+            if (isChecked5 && isChecked2)
+            {
+                Install("https://cdn.modrinth.com/data/PtjYWJkn/versions/M0ndiav7/sodium-extra-0.5.4%2Bmc1.20.4-build.116.jar", minecraftModsFolder);
+                Install("https://cdn.modrinth.com/data/Bh37bMuy/versions/fkLiGoHs/reeses_sodium_options-1.7.2%2Bmc1.20.4-build.102.jar", minecraftModsFolder);
 
-                if (isChecked13) { Install("https://cdn.modrinth.com/data/mOgUt4GM/versions/sjtVVlsA/modmenu-9.0.0.jar", minecraftModsFolder); }
-                if (isChecked14) { Install("https://cdn.modrinth.com/data/uXXizFIs/versions/pguEMpy9/ferritecore-6.0.3-fabric.jar", minecraftModsFolder); }
-                if (isChecked15) { Install("https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar", minecraftModsFolder); }
+                if (isChecked12) { Install("https://cdn.modrinth.com/data/SfMw2IZN/versions/J2fuM58R/nvidium-0.2.6-beta.jar", minecraftModsFolder); }
+            }
+
+            if (isChecked13) { Install("https://cdn.modrinth.com/data/mOgUt4GM/versions/sjtVVlsA/modmenu-9.0.0.jar", minecraftModsFolder); }
+            if (isChecked14) { Install("https://cdn.modrinth.com/data/uXXizFIs/versions/pguEMpy9/ferritecore-6.0.3-fabric.jar", minecraftModsFolder); }
+            if (isChecked15) { Install("https://cdn.modrinth.com/data/hvFnDODi/versions/0.1.3/lazydfu-0.1.3.jar", minecraftModsFolder); }
 
             MessageBox.Show("All mods installed seccessfully \n Now you can launch minecraft.", "Foxia Mod Installer", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -324,6 +324,14 @@ namespace Foxia_mod_installer
                 ModMenu.Visible = false;
                 LazyDFU.Visible = false;
             }
+        }
+
+        private void Credits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Credits credits = new Credits();
+            
+
+            credits.Show();
         }
     }
 
