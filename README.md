@@ -1,5 +1,5 @@
 # FoxiaModInstaller
 
-This tool allows you to install mods quickly.
+This tool is made for Foxia to quickly install simple voice chat and other client side mods quickly.
 
-Made by pargivaht
+
